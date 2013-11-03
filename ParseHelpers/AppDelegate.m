@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "LoginViewController.h"
 
 @implementation AppDelegate
 
@@ -23,6 +24,15 @@
     PFACL *defaultACL = [PFACL ACL];
     [defaultACL setPublicReadAccess:YES];
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    // Override point for customization after application launch.
+    
+    LoginViewController *masterViewController = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:masterViewController];
+    self.window.rootViewController = self.navigationController;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 							

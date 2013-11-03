@@ -43,6 +43,8 @@ static ParseHelper *sharedInstance = nil;
     user.username = login;
     user.email = email;
     user.password = password;
+    
+    //[user signUpInBackgroundWithBlock:block];
     [user saveInBackgroundWithBlock:block];
 }
 
@@ -69,6 +71,7 @@ static ParseHelper *sharedInstance = nil;
 {
     PFQuery *query = [PFQuery queryWithClassName:table];
     [query whereKey:@"field_id" equalTo:field_id];
+    [query whereKey:@"user" equalTo:[PFUser currentUser]];
     [query countObjectsInBackgroundWithBlock:^(int number, NSError *error) {
         if (number == 0) {
             
@@ -127,6 +130,7 @@ static ParseHelper *sharedInstance = nil;
 -(void)selectFrom:(NSString*)table block:(void (^)(NSArray *objects, NSError *error))block
 {
     PFQuery *query = [PFQuery queryWithClassName:table];
+    [query whereKey:@"user" equalTo:[PFUser currentUser]];
     [query findObjectsInBackgroundWithBlock:block];
 }
 
@@ -137,7 +141,9 @@ static ParseHelper *sharedInstance = nil;
     PFQuery *key1 = [PFQuery queryWithClassName:table];
     PFQuery *key2 = [PFQuery queryWithClassName:table];
     [key1 whereKey:@"field2" containsString:keyWord];
+    [key1 whereKey:@"user" equalTo:[PFUser currentUser]];
     [key2 whereKey:@"field3" containsString:keyWord];
+    [key2 whereKey:@"user" equalTo:[PFUser currentUser]];
     PFQuery *query = [PFQuery orQueryWithSubqueries:@[key1, key2]];
     [query findObjectsInBackgroundWithBlock:block];
 }

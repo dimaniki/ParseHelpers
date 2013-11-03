@@ -9,7 +9,8 @@
 #import "StartViewController.h"
 #import "ParseHelper.h"
 #import <Parse/Parse.h>
-
+#import "MasterViewController.h"
+#import "AddViewController.h"
 
 @interface StartViewController ()
 
@@ -26,38 +27,42 @@
     return self;
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqualToString:@"ShowSettings"]) {
-        if ([segue.destinationViewController respondsToSelector:@selector(setTarget:)]) {
-            [segue.destinationViewController performSelector:@selector(setTarget:) withObject:@"Settings"];
-        }
-    } else if ([segue.identifier isEqualToString:@"ShowTest"]) {
-        if ([segue.destinationViewController respondsToSelector:@selector(setTarget:)]) {
-            [segue.destinationViewController performSelector:@selector(setTarget:) withObject:@"Test"];
-        }
-    } else if ([segue.identifier isEqualToString:@"AddSettings"]) {
-        if ([segue.destinationViewController respondsToSelector:@selector(setTarget:)]) {
-            [segue.destinationViewController performSelector:@selector(setTarget:) withObject:@"Settings"];
-        }
-    } else if ([segue.identifier isEqualToString:@"AddTest"]) {
-        if ([segue.destinationViewController respondsToSelector:@selector(setTarget:)]) {
-            [segue.destinationViewController performSelector:@selector(setTarget:) withObject:@"Test"];
-        }
-    }
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self.navigationItem setHidesBackButton:YES animated:NO];
     self.navigationItem.title = [PFUser currentUser].email;
+    //[self.navigationController.navigationBar pushNavigationItem:self.navigationItem animated:NO];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)ShowSettings:(id)sender {
+    MasterViewController *masterViewControler = [[MasterViewController alloc] initWithNibName:@"MasterViewController" bundle:nil];
+    masterViewControler.target = @"Settings";
+    [self.navigationController pushViewController:masterViewControler animated:YES];
+}
+
+- (IBAction)ShowTest:(id)sender {
+    MasterViewController *masterViewControler = [[MasterViewController alloc] initWithNibName:@"MasterViewController" bundle:nil];
+    masterViewControler.target = @"Test";
+    [self.navigationController pushViewController:masterViewControler animated:YES];
+}
+
+- (IBAction)AddToSettings:(id)sender {
+    AddViewController *addViewController = [[AddViewController alloc] initWithNibName:@"AddViewController" bundle:nil];
+    addViewController.target = @"Settings";
+    [self.navigationController pushViewController:addViewController animated:YES];
+}
+
+- (IBAction)AddToTest:(id)sender {
+    AddViewController *addViewController = [[AddViewController alloc] initWithNibName:@"AddViewController" bundle:nil];
+    addViewController.target = @"Test";
+    [self.navigationController pushViewController:addViewController animated:YES];
 }
 
 - (IBAction)Logout:(id)sender {

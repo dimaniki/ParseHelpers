@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface StartViewController : UIViewController
-
+- (IBAction)ShowSettings:(id)sender;
+- (IBAction)ShowTest:(id)sender;
+- (IBAction)AddToSettings:(id)sender;
+- (IBAction)AddToTest:(id)sender;
 - (IBAction)Logout:(id)sender;
 
 @end

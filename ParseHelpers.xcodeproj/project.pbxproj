@@ -41,6 +41,12 @@
 		04AD30F11825A998005B2EB4 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04AD30F01825A998005B2EB4 /* Social.framework */; };
 		04AD30F41825CA56005B2EB4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD30F31825CA56005B2EB4 /* LoginViewController.m */; };
 		04AD30F71825CA64005B2EB4 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD30F61825CA64005B2EB4 /* SignupViewController.m */; };
+		04DE99AF1826FB5E00CD2EAE /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DE99AE1826FB5E00CD2EAE /* MasterViewController.xib */; };
+		04DE99B11826FB7300CD2EAE /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DE99B01826FB7300CD2EAE /* DetailViewController.xib */; };
+		04DE99B31826FC2000CD2EAE /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DE99B21826FC2000CD2EAE /* SignupViewController.xib */; };
+		04DE99B51826FC2C00CD2EAE /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DE99B41826FC2C00CD2EAE /* LoginViewController.xib */; };
+		04DE99B71826FC3400CD2EAE /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DE99B61826FC3400CD2EAE /* StartViewController.xib */; };
+		04DE99B91826FC3C00CD2EAE /* AddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DE99B81826FC3C00CD2EAE /* AddViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +95,12 @@
 		04AD30F31825CA56005B2EB4 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		04AD30F51825CA64005B2EB4 /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
 		04AD30F61825CA64005B2EB4 /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
+		04DE99AE1826FB5E00CD2EAE /* MasterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MasterViewController.xib; sourceTree = "<group>"; };
+		04DE99B01826FB7300CD2EAE /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		04DE99B21826FC2000CD2EAE /* SignupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
+		04DE99B41826FC2C00CD2EAE /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		04DE99B61826FC3400CD2EAE /* StartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StartViewController.xib; sourceTree = "<group>"; };
+		04DE99B81826FC3C00CD2EAE /* AddViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,16 +185,22 @@
 				04AD30B118259D7A005B2EB4 /* AppDelegate.m */,
 				04AD30F51825CA64005B2EB4 /* SignupViewController.h */,
 				04AD30F61825CA64005B2EB4 /* SignupViewController.m */,
+				04DE99B21826FC2000CD2EAE /* SignupViewController.xib */,
 				04AD30F21825CA55005B2EB4 /* LoginViewController.h */,
 				04AD30F31825CA56005B2EB4 /* LoginViewController.m */,
+				04DE99B41826FC2C00CD2EAE /* LoginViewController.xib */,
 				04AD30E11825A0CB005B2EB4 /* StartViewController.h */,
 				04AD30E21825A0CB005B2EB4 /* StartViewController.m */,
+				04DE99B61826FC3400CD2EAE /* StartViewController.xib */,
 				04AD30E41825A45F005B2EB4 /* AddViewController.h */,
 				04AD30E51825A45F005B2EB4 /* AddViewController.m */,
+				04DE99B81826FC3C00CD2EAE /* AddViewController.xib */,
 				04AD30BC18259D7A005B2EB4 /* MasterViewController.h */,
 				04AD30BD18259D7A005B2EB4 /* MasterViewController.m */,
+				04DE99AE1826FB5E00CD2EAE /* MasterViewController.xib */,
 				04AD30BF18259D7A005B2EB4 /* DetailViewController.h */,
 				04AD30C018259D7A005B2EB4 /* DetailViewController.m */,
+				04DE99B01826FB7300CD2EAE /* DetailViewController.xib */,
 				04AD30E71825A644005B2EB4 /* ParseHelper.h */,
 				04AD30E81825A644005B2EB4 /* ParseHelper.m */,
 				04AD30A818259D7A005B2EB4 /* Supporting Files */,
@@ -261,6 +279,12 @@
 				04AD30B818259D7A005B2EB4 /* Default-568h@2x.png in Resources */,
 				04AD30BB18259D7A005B2EB4 /* MainStoryboard.storyboard in Resources */,
 				04AD30E01825A0AB005B2EB4 /* FacebookSDKResources.bundle in Resources */,
+				04DE99AF1826FB5E00CD2EAE /* MasterViewController.xib in Resources */,
+				04DE99B11826FB7300CD2EAE /* DetailViewController.xib in Resources */,
+				04DE99B31826FC2000CD2EAE /* SignupViewController.xib in Resources */,
+				04DE99B51826FC2C00CD2EAE /* LoginViewController.xib in Resources */,
+				04DE99B71826FC3400CD2EAE /* StartViewController.xib in Resources */,
+				04DE99B91826FC3C00CD2EAE /* AddViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +434,7 @@
 				04AD30C618259D7A005B2EB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

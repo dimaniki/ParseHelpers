@@ -8,6 +8,8 @@
 
 #import "LoginViewController.h"
 #import "ParseHelper.h"
+#import "StartViewController.h"
+#import "SignupViewController.h"
 
 @interface LoginViewController ()
 
@@ -97,7 +99,16 @@
 
 -(void)loggedIn
 {
-    [self performSegueWithIdentifier:@"StartPage" sender:self];
+    StartViewController *startPage = [[StartViewController alloc] initWithNibName:@"StartViewController" bundle:nil];
+    [self.navigationController pushViewController:startPage animated:YES];
+    //[self performSegueWithIdentifier:@"StartPage" sender:self];
+}
+
+-(void)signup:(id)sender
+{
+    SignupViewController *signupViewController = [[SignupViewController alloc] initWithNibName:@"SignupViewController" bundle:nil];
+    [self.navigationController pushViewController:signupViewController animated:YES];
+    //[self performSegueWithIdentifier:@"StartPage" sender:self];
 }
 
 @end

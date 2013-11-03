@@ -17,5 +17,6 @@
 
 - (IBAction)login:(id)sender;
 - (IBAction)loginFacebook:(id)sender;
+- (IBAction)signup:(id)sender;
 
 @end

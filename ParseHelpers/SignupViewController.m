@@ -8,6 +8,7 @@
 
 #import "SignupViewController.h"
 #import "ParseHelper.h"
+#import "StartViewController.h"
 
 @interface SignupViewController ()
 
@@ -80,7 +81,8 @@
 //            [currentInstallation saveInBackground];
             
         
-            [self performSegueWithIdentifier:@"StartPage" sender:self];
+            StartViewController *startPage = [[StartViewController alloc] initWithNibName:@"StartViewController" bundle:nil];
+            [self.navigationController pushViewController:startPage animated:YES];
         } else {
             NSString *errorString = [[error userInfo] objectForKey:@"error"];
             NSLog(@"Error signing normal: %@", errorString);
