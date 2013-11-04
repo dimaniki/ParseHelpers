@@ -29,7 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	if ([PFUser currentUser]) {
+	if ([PFUser currentUser] && [PFUser currentUser].username.length) {
         [self loggedIn];
     }
 }
