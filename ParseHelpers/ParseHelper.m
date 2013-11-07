@@ -39,13 +39,12 @@ static ParseHelper *sharedInstance = nil;
 // We've enabled automatic user in AppDelegate, so for signin up we only neet to fill mandatory fields
 -(void)signup:(NSString *)login password:(NSString *)password email:(NSString *)email block:(void (^)(BOOL, NSError *))block
 {
-    PFUser * user = [PFUser currentUser];
+    PFUser * user = [PFUser user];
     user.username = login;
     user.email = email;
     user.password = password;
     
-    //[user signUpInBackgroundWithBlock:block];
-    [user saveInBackgroundWithBlock:block];
+    [user signUpInBackgroundWithBlock:block];
 }
 
 -(void)logout
